@@ -1,0 +1,66 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(() => {
+var exports = {};
+exports.id = "pages/ImageChangeOnScroll";
+exports.ids = ["pages/ImageChangeOnScroll"];
+exports.modules = {
+
+/***/ "./pages/ImageChangeOnScroll.js":
+/*!**************************************!*\
+  !*** ./pages/ImageChangeOnScroll.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _src_ImageToggleOnScroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/ImageToggleOnScroll */ \"./src/ImageToggleOnScroll.js\");\n\n\n\nconst ImageChangeOnScroll = ()=>{\n    const images = [\n        \"Lily\",\n        \"Tea\",\n        \"Fox\",\n        \"DistanceOfTheMoon\",\n        \"Daisies\",\n        \"Birdskull\",\n        \"Buttercup\"\n    ];\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: images.map((image)=>{\n            return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_src_ImageToggleOnScroll__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                    primaryImg: `/static/images/thumbs/${image}Thumb.jpg`,\n                    secondaryImg: `/static/images/fulls/${image}Full.jpg`,\n                    alt: \"\"\n                }, void 0, false, {\n                    fileName: \"/Users/erintruman/workspace/clip2-setting-up-toolchain/pages/ImageChangeOnScroll.js\",\n                    lineNumber: 11,\n                    columnNumber: 25\n                }, undefined)\n            }, image, false, {\n                fileName: \"/Users/erintruman/workspace/clip2-setting-up-toolchain/pages/ImageChangeOnScroll.js\",\n                lineNumber: 10,\n                columnNumber: 21\n            }, undefined);\n        })\n    }, void 0, false, {\n        fileName: \"/Users/erintruman/workspace/clip2-setting-up-toolchain/pages/ImageChangeOnScroll.js\",\n        lineNumber: 7,\n        columnNumber: 9\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ImageChangeOnScroll);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9JbWFnZUNoYW5nZU9uU2Nyb2xsLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUFBO0FBQTBCO0FBQ21DO0FBRTdELE1BQU1FLG1CQUFtQixHQUFHLElBQU07SUFDOUIsTUFBTUMsTUFBTSxHQUFHO1FBQUMsTUFBTTtRQUFFLEtBQUs7UUFBRSxLQUFLO1FBQUUsbUJBQW1CO1FBQUUsU0FBUztRQUFFLFdBQVc7UUFBRSxXQUFXO0tBQUM7SUFDL0YscUJBQ0ksOERBQUNDLEtBQUc7a0JBQ0NELE1BQU0sQ0FBQ0UsR0FBRyxDQUFDLENBQUNDLEtBQUssR0FBSztZQUNuQixxQkFDSSw4REFBQ0YsS0FBRzswQkFDQSw0RUFBQ0gsZ0VBQW1CO29CQUFDTSxVQUFVLEVBQUUsQ0FBQyxzQkFBc0IsRUFBRUQsS0FBSyxDQUFDLFNBQVMsQ0FBQztvQkFBRUUsWUFBWSxFQUFFLENBQUMscUJBQXFCLEVBQUVGLEtBQUssQ0FBQyxRQUFRLENBQUM7b0JBQUVHLEdBQUcsRUFBQyxFQUFFOzs7Ozs2QkFBRztlQUR0SUgsS0FBSzs7Ozt5QkFFVCxDQUNUO1FBQ0wsQ0FBQyxDQUFDOzs7OztpQkFDQSxDQUNSO0FBQ04sQ0FBQztBQUVELGlFQUFlSixtQkFBbUIsRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL2NsaXAyLXNldHRpbmctdXAtdG9vbGNoYWluLy4vcGFnZXMvSW1hZ2VDaGFuZ2VPblNjcm9sbC5qcz82MDcyIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCByZWFjdCBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBJbWFnZVRvZ2dsZU9uU2Nyb2xsIGZyb20gXCIuLi9zcmMvSW1hZ2VUb2dnbGVPblNjcm9sbFwiO1xuXG5jb25zdCBJbWFnZUNoYW5nZU9uU2Nyb2xsID0gKCkgPT4ge1xuICAgIGNvbnN0IGltYWdlcyA9IFtcIkxpbHlcIiwgXCJUZWFcIiwgXCJGb3hcIiwgXCJEaXN0YW5jZU9mVGhlTW9vblwiLCBcIkRhaXNpZXNcIiwgXCJCaXJkc2t1bGxcIiwgXCJCdXR0ZXJjdXBcIl1cbiAgICByZXR1cm4gKFxuICAgICAgICA8ZGl2PlxuICAgICAgICAgICAge2ltYWdlcy5tYXAoKGltYWdlKSA9PiB7XG4gICAgICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgICAgICAgPGRpdiBrZXk9e2ltYWdlfT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxJbWFnZVRvZ2dsZU9uU2Nyb2xsIHByaW1hcnlJbWc9e2Avc3RhdGljL2ltYWdlcy90aHVtYnMvJHtpbWFnZX1UaHVtYi5qcGdgfSBzZWNvbmRhcnlJbWc9e2Avc3RhdGljL2ltYWdlcy9mdWxscy8ke2ltYWdlfUZ1bGwuanBnYH0gYWx0PVwiXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgKVxuICAgICAgICAgICAgfSl9XG4gICAgICAgIDwvZGl2PlxuICAgICk7XG59O1xuXG5leHBvcnQgZGVmYXVsdCBJbWFnZUNoYW5nZU9uU2Nyb2xsOyJdLCJuYW1lcyI6WyJyZWFjdCIsIkltYWdlVG9nZ2xlT25TY3JvbGwiLCJJbWFnZUNoYW5nZU9uU2Nyb2xsIiwiaW1hZ2VzIiwiZGl2IiwibWFwIiwiaW1hZ2UiLCJwcmltYXJ5SW1nIiwic2Vjb25kYXJ5SW1nIiwiYWx0Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./pages/ImageChangeOnScroll.js\n");
+
+/***/ }),
+
+/***/ "./src/ImageToggleOnScroll.js":
+/*!************************************!*\
+  !*** ./src/ImageToggleOnScroll.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst ImageTogglerOnScroll = ({ primaryImg , secondaryImg  })=>{\n    const imageRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);\n    const isInView = ()=>{\n        const rect = imageRef.current.getBoundingClientRect(); // provides info about size onf an element, and it's position relative to viewport\n        return rect.top >= 0 && rect.bottom <= window.innerHeight; // gets size of image rectangle\n    };\n    const { 0: inView , 1: setInView  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);\n    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{\n        window.addEventListener(\"scroll\", scrollHandler); // first parameter of useEffect is a function that gets executed when component mounts\n        return ()=>{\n            window.removeEventListener(\"scroll\", scrollHandler) // have to remove listener before component unmounts\n            ;\n        };\n    }, []) // second parameter is dependency array. empty array only runs when component first rendered\n    ;\n    const scrollHandler = ()=>{\n        setInView(isInView()); // called every time you scroll. gets info about what image currently in view. sets inView state for each image\n    };\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n        src: inView ? secondaryImg : primaryImg,\n        alt: \"\",\n        ref: imageRef\n    }, void 0, false, {\n        fileName: \"/Users/erintruman/workspace/clip2-setting-up-toolchain/src/ImageToggleOnScroll.js\",\n        lineNumber: 22,\n        columnNumber: 9\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ImageTogglerOnScroll);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvSW1hZ2VUb2dnbGVPblNjcm9sbC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBO0FBQTJEO0FBRTNELE1BQU1JLG9CQUFvQixHQUFHLENBQUMsRUFBRUMsVUFBVSxHQUFFQyxZQUFZLEdBQUUsR0FBSztJQUMzRCxNQUFNQyxRQUFRLEdBQUdOLDZDQUFNLENBQUMsSUFBSSxDQUFDO0lBQzdCLE1BQU1PLFFBQVEsR0FBRyxJQUFNO1FBQ25CLE1BQU1DLElBQUksR0FBR0YsUUFBUSxDQUFDRyxPQUFPLENBQUNDLHFCQUFxQixFQUFFLEVBQUUsa0ZBQWtGO1FBQ3pJLE9BQU9GLElBQUksQ0FBQ0csR0FBRyxJQUFJLENBQUMsSUFBSUgsSUFBSSxDQUFDSSxNQUFNLElBQUlDLE1BQU0sQ0FBQ0MsV0FBVyxDQUFDLENBQUMsK0JBQStCO0lBQzlGLENBQUM7SUFDRCxNQUFNLEtBQUNDLE1BQU0sTUFBRUMsU0FBUyxNQUFJZCwrQ0FBUSxDQUFDLEtBQUssQ0FBQztJQUUzQ0QsZ0RBQVMsQ0FBQyxJQUFJO1FBQ1ZZLE1BQU0sQ0FBQ0ksZ0JBQWdCLENBQUMsUUFBUSxFQUFFQyxhQUFhLENBQUMsQ0FBQyxDQUFDLHNGQUFzRjtRQUN4SSxPQUFPLElBQUs7WUFDUkwsTUFBTSxDQUFDTSxtQkFBbUIsQ0FBQyxRQUFRLEVBQUVELGFBQWEsQ0FBQyxDQUFDLG9EQUFvRDs7UUFDNUcsQ0FBQztJQUNMLENBQUMsRUFBRSxFQUFFLENBQUMsQ0FBQyw0RkFBNEY7O0lBRW5HLE1BQU1BLGFBQWEsR0FBRyxJQUFNO1FBQ3hCRixTQUFTLENBQUNULFFBQVEsRUFBRSxDQUFDLENBQUMsQ0FBQywrR0FBK0c7SUFDMUksQ0FBQztJQUNELHFCQUNJLDhEQUFDYSxLQUFHO1FBQ0FDLEdBQUcsRUFBRU4sTUFBTSxHQUFHVixZQUFZLEdBQUdELFVBQVU7UUFDdkNrQixHQUFHLEVBQUMsRUFBRTtRQUFDQyxHQUFHLEVBQUVqQixRQUFROzs7OztpQkFDdEIsQ0FDTDtBQUNMLENBQUM7QUFFRCxpRUFBZUgsb0JBQW9CIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vY2xpcDItc2V0dGluZy11cC10b29sY2hhaW4vLi9zcmMvSW1hZ2VUb2dnbGVPblNjcm9sbC5qcz9jYzcwIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCByZWFjdCwgeyB1c2VSZWYsIHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tIFwicmVhY3RcIjtcblxuY29uc3QgSW1hZ2VUb2dnbGVyT25TY3JvbGwgPSAoeyBwcmltYXJ5SW1nLCBzZWNvbmRhcnlJbWcgfSkgPT4ge1xuICAgIGNvbnN0IGltYWdlUmVmID0gdXNlUmVmKG51bGwpXG4gICAgY29uc3QgaXNJblZpZXcgPSAoKSA9PiB7XG4gICAgICAgIGNvbnN0IHJlY3QgPSBpbWFnZVJlZi5jdXJyZW50LmdldEJvdW5kaW5nQ2xpZW50UmVjdCgpOyAvLyBwcm92aWRlcyBpbmZvIGFib3V0IHNpemUgb25mIGFuIGVsZW1lbnQsIGFuZCBpdCdzIHBvc2l0aW9uIHJlbGF0aXZlIHRvIHZpZXdwb3J0XG4gICAgICAgIHJldHVybiByZWN0LnRvcCA+PSAwICYmIHJlY3QuYm90dG9tIDw9IHdpbmRvdy5pbm5lckhlaWdodDsgLy8gZ2V0cyBzaXplIG9mIGltYWdlIHJlY3RhbmdsZVxuICAgIH1cbiAgICBjb25zdCBbaW5WaWV3LCBzZXRJblZpZXddID0gdXNlU3RhdGUoZmFsc2UpXG5cbiAgICB1c2VFZmZlY3QoKCk9PntcbiAgICAgICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoXCJzY3JvbGxcIiwgc2Nyb2xsSGFuZGxlcik7IC8vIGZpcnN0IHBhcmFtZXRlciBvZiB1c2VFZmZlY3QgaXMgYSBmdW5jdGlvbiB0aGF0IGdldHMgZXhlY3V0ZWQgd2hlbiBjb21wb25lbnQgbW91bnRzXG4gICAgICAgIHJldHVybiAoKSA9PntcbiAgICAgICAgICAgIHdpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKFwic2Nyb2xsXCIsIHNjcm9sbEhhbmRsZXIpIC8vIGhhdmUgdG8gcmVtb3ZlIGxpc3RlbmVyIGJlZm9yZSBjb21wb25lbnQgdW5tb3VudHNcbiAgICAgICAgfVxuICAgIH0sIFtdKSAvLyBzZWNvbmQgcGFyYW1ldGVyIGlzIGRlcGVuZGVuY3kgYXJyYXkuIGVtcHR5IGFycmF5IG9ubHkgcnVucyB3aGVuIGNvbXBvbmVudCBmaXJzdCByZW5kZXJlZFxuXG4gICAgY29uc3Qgc2Nyb2xsSGFuZGxlciA9ICgpID0+IHtcbiAgICAgICAgc2V0SW5WaWV3KGlzSW5WaWV3KCkpOyAvLyBjYWxsZWQgZXZlcnkgdGltZSB5b3Ugc2Nyb2xsLiBnZXRzIGluZm8gYWJvdXQgd2hhdCBpbWFnZSBjdXJyZW50bHkgaW4gdmlldy4gc2V0cyBpblZpZXcgc3RhdGUgZm9yIGVhY2ggaW1hZ2VcbiAgICB9XG4gICAgcmV0dXJuIChcbiAgICAgICAgPGltZyBcbiAgICAgICAgICAgIHNyYz17aW5WaWV3ID8gc2Vjb25kYXJ5SW1nIDogcHJpbWFyeUltZ31cbiAgICAgICAgICAgIGFsdD1cIlwiIHJlZj17aW1hZ2VSZWZ9IC8vIGltYWdlUmVmIGFzc2lnbmVkIHRvIGNvbnN0YW50IHVwb24gcmVuZGVyLiBhY2Nlc3MgaW1hZ2VSZWYuY3VycmVudCB0byBnZXQgdG8gaW1hZ2UgYXR0cmlidXRlc1xuICAgICAgICAvPlxuICAgIClcbn1cblxuZXhwb3J0IGRlZmF1bHQgSW1hZ2VUb2dnbGVyT25TY3JvbGwiXSwibmFtZXMiOlsicmVhY3QiLCJ1c2VSZWYiLCJ1c2VFZmZlY3QiLCJ1c2VTdGF0ZSIsIkltYWdlVG9nZ2xlck9uU2Nyb2xsIiwicHJpbWFyeUltZyIsInNlY29uZGFyeUltZyIsImltYWdlUmVmIiwiaXNJblZpZXciLCJyZWN0IiwiY3VycmVudCIsImdldEJvdW5kaW5nQ2xpZW50UmVjdCIsInRvcCIsImJvdHRvbSIsIndpbmRvdyIsImlubmVySGVpZ2h0IiwiaW5WaWV3Iiwic2V0SW5WaWV3IiwiYWRkRXZlbnRMaXN0ZW5lciIsInNjcm9sbEhhbmRsZXIiLCJyZW1vdmVFdmVudExpc3RlbmVyIiwiaW1nIiwic3JjIiwiYWx0IiwicmVmIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/ImageToggleOnScroll.js\n");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ ((module) => {
+
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ ((module) => {
+
+module.exports = require("react/jsx-dev-runtime");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = (__webpack_exec__("./pages/ImageChangeOnScroll.js"));
+module.exports = __webpack_exports__;
+
+})();

@@ -18,10 +18,10 @@ const SignMeUp = ({ signupCallback }) => {
                     />
                     &nbsp;
                     <button
-                        disabled={!email.includes('@')}
+                        disabled={!email.includes('@')} // disabled if text does not include @
                         onClick={() => {
-                            signupCallback(email);
-                            setEmail('');
+                            signupCallback(email); 
+                            setEmail(''); // clears input field
                             alert('signup confirmed');
                         }}
                         className="btn"

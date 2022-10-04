@@ -6,3 +6,5 @@ function index() {
 }
 
 export default index;
+
+// this is the root of our site

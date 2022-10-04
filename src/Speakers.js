@@ -13,20 +13,20 @@ const Speakers = ({ }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setIsLoading(true);
+        setIsLoading(true); // makes sure loading status set to true
         new Promise(function (resolve) {
             setTimeout(function () {
                 resolve();
-            }, 1000);
+            }, 1000); // reates one second delay, returns a promise
         }).then(() => {
-            setSpeakerList(SpeakerData);
-            setIsLoading(false);
+            setSpeakerList(SpeakerData); // after loads, sets speaker list to speaker data
+            setIsLoading(false); // sets loading to falsex
         });
 
         return () => {
-            console.log('cleanup'); // cleanup function would go here
+            console.log('cleanup'); // cleanup function would go here, we don't need that
         };
-    }, []);
+    }, []); // only runs once
 
     const handleChangeSaturday = () => {
         setSpeakingSaturday(!speakingSaturday);
@@ -55,21 +55,21 @@ const Speakers = ({ }) => {
 
     const heartFavoriteHandler = (e, favoriteValue) => {
         e.preventDefault();
-        const sessionId = parseInt(e.target.attributes['data-sessionid'].value);
+        const sessionId = parseInt(e.target.attributes['data-sessionid'].value); // this is how we get the id of the speaker favorited
         setSpeakerList(
             speakerList.map((item) => {
                 if (item.id === sessionId) {
-                    return { ...item, favorite: favoriteValue };
+                    return { ...item, favorite: favoriteValue }; //overwrites favorite value in SpeakerData
                 }
                 return item;
             }),
         );
     };
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) return <div>Loading...</div>; // loading message before useEffect runs
 
     return (
-        <div>
+        <div> 
             <Header />
             <Menu />
             <div className="container">
@@ -105,6 +105,7 @@ const Speakers = ({ }) => {
                             ({ id, firstName, lastName, bio, favorite }) => {
                                 return (
                                     <SpeakerDetail
+                                    // takes in speaker detain properties and passes them as attributes
                                         key={id}
                                         id={id}
                                         favorite={favorite}

@@ -1,13 +1,19 @@
 {
     "parserOptions": {
-        "ecmaversion": 2020,
+        "ecmaVersion": 2020,
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
         }
     },
-    "plugins": ["react-hooks"],
+    "plugins": [
+        "react-hooks"
+    ],
     "rules": {
+        "semi": [
+            2,
+            "always"
+        ],
         "react-hooks/rules-of-hooks": "error"
     }
 }

@@ -4,7 +4,7 @@ import ImageToggleOnScroll from "../src/ImageToggleOnScroll";
 const ImageChangeOnScroll = () => {
     const [currentImage, setCurrentImage] = useState("");
     const [mouseEventCount, setMouseEventCount] = useState(0);
-    const images = ["Lily", "Tea", "Fox", "DistanceOfTheMoon", "Daisies", "Birdskull", "Buttercup"]
+    const images = [1124, 1269, 1530, 10803, 10808]
 
     useEffect(()=>{
         window.document.title= `image: ${currentImage}` // sets browswer tab title
@@ -22,7 +22,7 @@ const ImageChangeOnScroll = () => {
                         setMouseEventCount(mouseEventCount +1)
                         console.log(`onMouseOver:${image}`)
                     }}>
-                        <ImageToggleOnScroll primaryImg={`/static/images/thumbs/${image}Thumb.jpg`} secondaryImg={`/static/images/fulls/${image}Full.jpg` } alt="" />
+                        <ImageToggleOnScroll primaryImg={`/static/speakers/bw/Speaker-${image}.jpeg`} secondaryImg={`/static/speakers/Speaker-${image}.jpeg` } alt="" />
                     </div>
                 )
             })}

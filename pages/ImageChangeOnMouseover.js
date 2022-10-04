@@ -4,9 +4,17 @@ import ImageTogglerOnMouseOver from "../src/ImageTogglerOnMouseOver";
 const ImageChangeOnMouseOver = () => {
     return (
         <div>
-            <ImageTogglerOnMouseOver primaryImg="/static/images/thumbs/TeaThumb.jpg" secondaryImg="/static/images/thumbs/DistanceOfTheMoonThumb.jpg" alt="" />
-            &nbsp;&nbsp;&nbsp;
-            <ImageTogglerOnMouseOver primaryImg="/static/images/thumbs/LilyThumb.jpg" secondaryImg="/static/images/thumbs/FoxThumb.jpg" alt="" />
+            <div>
+                <ImageTogglerOnMouseOver primaryImg="/static/images/thumbs/TeaThumb.jpg" secondaryImg="/static/images/thumbs/DistanceOfTheMoonThumb.jpg" alt="" />
+                &nbsp;&nbsp;&nbsp;
+                <ImageTogglerOnMouseOver primaryImg="/static/images/thumbs/LilyThumb.jpg" secondaryImg="/static/images/thumbs/FoxThumb.jpg" alt="" />
+                &nbsp;&nbsp;&nbsp;
+            </div>
+            <div>
+                <ImageTogglerOnMouseOver primaryImg="/static/images/thumbs/DaisiesThumb.jpg" secondaryImg="/static/images/thumbs/FullMoonCalendarThumb.jpg" alt="" />
+                &nbsp;&nbsp;&nbsp;
+                <ImageTogglerOnMouseOver primaryImg="/static/images/thumbs/BirdskullThumb.jpg" secondaryImg="/static/images/thumbs/ButtercupThumb.jpg" alt="" />
+            </div>
         </div>
     );
 };

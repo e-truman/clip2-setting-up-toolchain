@@ -11,7 +11,7 @@ const ImageChangeOnMouseOver = () => {
                 &nbsp;&nbsp;&nbsp;
             </div>
             <div>
-                <ImageTogglerOnMouseOver primaryImg="/static/images/thumbs/DaisiesThumb.jpg" secondaryImg="/static/images/thumbs/FullMoonCalendarThumb.jpg" alt="" />
+                <ImageTogglerOnMouseOver primaryImg="/static/images/thumbs/DaisiesThumb.jpg" style="height: 199px;" secondaryImg="/static/images/thumbs/FullMoonCalendarThumb.jpg" alt="" />
                 &nbsp;&nbsp;&nbsp;
                 <ImageTogglerOnMouseOver primaryImg="/static/images/thumbs/BirdskullThumb.jpg" secondaryImg="/static/images/thumbs/ButtercupThumb.jpg" alt="" />
             </div>

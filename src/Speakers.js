@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, useReducer, useCallback } from 'react';
+import React, { useEffect, useState, useContext, useReducer, useCallback, useMemo } from 'react';
 
 import { Header } from './Header';
 import { Menu } from './Menu';
@@ -50,22 +50,45 @@ const Speakers = ({ }) => {
     const handleChangeSunday = () => {
         setSpeakingSunday(!speakingSunday);
     };
-    const speakerListFiltered = isLoading
+    // const speakerListFiltered = isLoading  // speakerListFilter before optimizing with useMemo
+    //     ? []
+    //     : speakerList
+    //         .filter(
+    //             ({ sat, sun }) =>
+    //                 (speakingSaturday && sat) || (speakingSunday && sun),
+    //         )
+    //         .sort(function (a, b) {
+    //             if (a.firstName < b.firstName) {
+    //                 return -1;
+    //             }
+    //             if (a.firstName > b.firstName) {
+    //                 return 1;
+    //             }
+    //             return 0;
+    //         });
+    const newSpeakerList = useMemo( // takes two parameters. 1.) the function we want to memoize (only update if it changes from cached value)
+        () =>
+            speakerList
+                .filter(
+                    ({ sat, sun }) =>
+                        (speakingSaturday && sat) || (speakingSunday && sun),
+                )
+                .sort(function (a, b) {
+                    if (a.firstName < b.firstName) {
+                        return -1;
+                    }
+                    if (a.firstName > b.firstName) {
+                        return 1;
+                    }
+                    return 0;
+                }),
+        [speakingSaturday, speakingSunday, speakerList], //second parameter is dependency array similar to useEffect. if any of these changes, useMemo runs the function again and caches that value
+    ); 
+
+
+    const speakerListFiltered = isLoading // had to filter before conditionally calling if isLoading because hooks can't be called conditionally
         ? []
-        : speakerList
-            .filter(
-                ({ sat, sun }) =>
-                    (speakingSaturday && sat) || (speakingSunday && sun),
-            )
-            .sort(function (a, b) {
-                if (a.firstName < b.firstName) {
-                    return -1;
-                }
-                if (a.firstName > b.firstName) {
-                    return 1;
-                }
-                return 0;
-            });
+        : newSpeakerList
 
     const heartFavoriteHandler = useCallback((e, favoriteValue) => {
         e.preventDefault();
@@ -83,7 +106,7 @@ const Speakers = ({ }) => {
         //         return item;
         //     }),
         // );
-    },[]); //return of useCallback caches function value
+    }, []); //return of useCallback caches function value
 
     if (isLoading) return <div>Loading...</div> // loading message before useEffect runs
 

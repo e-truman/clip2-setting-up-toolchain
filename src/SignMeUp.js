@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ConfigContext } from './App'; // have to import ConfigContext and useContext
+
 
 const SignMeUp = ({ signupCallback }) => {
     const [email, setEmail] = useState('');
-
-    return (
+    const context = useContext(ConfigContext); // gets reference to context
+    
+    return context.showSignMeUp === false ? null : (
         <div className="container">
             <div>
                 <div className="content">

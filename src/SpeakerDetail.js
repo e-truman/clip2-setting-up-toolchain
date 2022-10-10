@@ -1,6 +1,7 @@
+import React from 'react';
 import ImageToggleOnScroll from './ImageToggleOnScroll';
 
-const SpeakerDetail = ({
+const SpeakerDetail = React.memo(({ // returns cache of speaker detail component to calling component
     id,
     firstName,
     lastName,
@@ -19,10 +20,10 @@ const SpeakerDetail = ({
             <div className="card-body">
                 <h4 className="card-title">
                     <button
-                        data-sessionid={id}
-                        className={favorite ? 'heartredbutton' : 'heartdarkbutton'}
+                        data-sessionid={id} // use this id so we have access to which speaker got favorited
+                        className={favorite ? 'heartredbutton' : 'heartdarkbutton'} // class is changed for the button every time clicked
                         onClick={(e) => {
-                            onHeartFavoriteHandler(e, !favorite);
+                            onHeartFavoriteHandler(e, !favorite); // click event switches heart class back and forth
                         }}
                     />
                     <span>
@@ -33,6 +34,6 @@ const SpeakerDetail = ({
             </div>
         </div>
     );
-};
+}); 
 
 export default SpeakerDetail;

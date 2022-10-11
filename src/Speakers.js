@@ -12,29 +12,32 @@ const Speakers = ({ }) => {
     const [speakingSunday, setSpeakingSunday] = useState(true);
 
     // const [speakerList, setSpeakerList] = useState([]); // use reducer below accomplishes the same thing as this
-    const [speakerList, dispatch] = useReducer(speakersReducer, []) // first parameter is reducer function, second parameter is what ti initialize oor state to
-    const [isLoading, setIsLoading] = useState(true);
+    const [{ isLoading, speakerList }, dispatch] = useReducer(speakersReducer, { isLoading: true, speakerList: [] }) // first parameter is reducer function, second parameter is what ti initialize oor state to
+    // const isLoading = stateObject.isLoading
+    // const speakerList = stateObject.speakerList // dereferencing the object in the state in reducer is the same as doing this
+
+    // const [isLoading, setIsLoading] = useState(true); // after refactoring, get this from useReducer
 
     // when use dispatch keyword, speakersReducer is called. changed to dispatch from setSpeakerList
     const context = useContext(ConfigContext); // gets reference to context
 
     useEffect(() => {
-        setIsLoading(true); // makes sure loading status set to true
+        // setIsLoading(true); // makes sure loading status set to true // can remove from code after including isLoading state with reducer
         new Promise(function (resolve) {
             setTimeout(function () {
                 resolve();
             }, 1000); // reates one second delay, returns a promise
         }).then(() => {
-            setIsLoading(false)
-            const speakerListServerFilter = SpeakerData.filter(({ sat, sun }) => {
-                return (speakingSaturday && sat) || (speakingSunday && sun);
-            });
+            // setIsLoading(false)
+            // const speakerListServerFilter = SpeakerData.filter(({ sat, sun }) => { // use reducer filters now
+            //     return (speakingSaturday && sat) || (speakingSunday && sun);
+            // });
             // setSpeakerList(speakerListServerFilter); // after loads, sets speaker list to speaker data
             // setIsLoading(false); // sets loading to false
 
             dispatch({
                 type: "setSpeakerList",
-                data: speakerListServerFilter
+                data: speakerData
             })
         });
 
@@ -83,7 +86,7 @@ const Speakers = ({ }) => {
                     return 0;
                 }),
         [speakingSaturday, speakingSunday, speakerList], //second parameter is dependency array similar to useEffect. if any of these changes, useMemo runs the function again and caches that value
-    ); 
+    );
 
 
     const speakerListFiltered = isLoading // had to filter before conditionally calling if isLoading because hooks can't be called conditionally
@@ -96,7 +99,7 @@ const Speakers = ({ }) => {
 
         dispatch({
             type: favoriteValue === true ? "favorite" : "unfavorite",
-            sessionId
+            id: sessionId
         })
         // setSpeakerList(
         //     speakerList.map((item) => {

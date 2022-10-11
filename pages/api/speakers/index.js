@@ -1,6 +1,6 @@
 //  
 import path from 'path';
-import fs, { readFile } from 'fs';
+import fs from 'fs';
 
 const { promisify } = require('util');
 const readFile = promisify(fs.readFile);
@@ -31,3 +31,6 @@ console.log('/api/speakers error:', e) // just writing errors to console if fail
 //incluse javascript that gets run when user sends a request tho that url by name 9url name the same as name of folder, that is)
 // this is for speaker get request
 // 
+
+//import speakerData from '../../../src/SpeakerData';
+

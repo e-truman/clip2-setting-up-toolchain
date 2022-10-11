@@ -12,6 +12,12 @@ const useSpeakerDataManager = () => {
 
     // when use dispatch keyword, speakersReducer is called. changed to dispatch from setSpeakerList
 
+    const toggleSpeakerFavorite = (speakerRecord) => {
+        speakerRecord.favorite === true ?
+            dispatch({ type: "unfavorite", id: speakerRecord.id }) :
+            dispatch({ type: "favorite", id: speakerRecord.id })
+    }
+
     useEffect(() => {
         // setIsLoading(true); // makes sure loading status set to true // can remove from code after including isLoading state with reducer
         new Promise(function (resolve) {
@@ -36,7 +42,8 @@ const useSpeakerDataManager = () => {
             console.log('cleanup'); // cleanup function would go here, we don't need that
         };
     }, []); // only runs once
-    return { isLoading, speakerList, dispatch };
+    // return { isLoading, speakerList, dispatch };
+    return { isLoading, speakerList, toggleSpeakerFavorite }; // handled dispatch in toggleSpeakerFavorite function to make code easier to read. hard to understand what dispatch means
 }
 
 export default useSpeakerDataManager

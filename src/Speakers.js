@@ -11,7 +11,7 @@ const Speakers = ({ }) => {
     const [speakingSunday, setSpeakingSunday] = useState(true);
     const context = useContext(ConfigContext); // gets reference to context
 
-const {isLoading, speakerList, dispatch} = useSpeakerDataManager();
+    const { isLoading, speakerList, toggleSpeakerFavorite } = useSpeakerDataManager();
 
     const handleChangeSaturday = () => {
         setSpeakingSaturday(!speakingSaturday);
@@ -60,14 +60,14 @@ const {isLoading, speakerList, dispatch} = useSpeakerDataManager();
         ? []
         : newSpeakerList
 
-    const heartFavoriteHandler = useCallback((e, favoriteValue) => {
+    const heartFavoriteHandler = useCallback((e, speakerRecord) => { // changed parameter from favoriteValue to speakerRecord
         e.preventDefault();
-        const sessionId = parseInt(e.target.attributes['data-sessionid'].value); // this is how we get the id of the speaker favorited
-
-        dispatch({
-            type: favoriteValue === true ? "favorite" : "unfavorite",
-            id: sessionId
-        })
+        // const sessionId = parseInt(e.target.attributes['data-sessionid'].value); // this is how we get the id of the speaker favorited // can remove when pass speakerRecord to toggleSpeakerFavorite
+        toggleSpeakerFavorite(speakerRecord) // less confusing to create toggle speaker favorite function in useSpeakerDataManager hook. replaced dispatch with that. passing in currently selected speaker record
+        // dispatch({
+        //     type: favoriteValue === true ? "favorite" : "unfavorite",
+        //     id: sessionId
+        // })
         // setSpeakerList(
         //     speakerList.map((item) => {
         //         if (item.id === sessionId) {
@@ -116,16 +116,18 @@ const {isLoading, speakerList, dispatch} = useSpeakerDataManager();
                 <div className="row">
                     <div className="card-deck">
                         {speakerListFiltered.map(
-                            ({ id, firstName, lastName, bio, favorite }) => {
+                            // ({ id, firstName, lastName, bio, favorite }) => {
+                                (speakerRecord) => {
                                 return (
                                     <SpeakerDetail
                                         // takes in speaker detain properties and passes them as attributes
-                                        key={id}
-                                        id={id}
-                                        favorite={favorite}
-                                        firstName={firstName}
-                                        lastName={lastName}
-                                        bio={bio}
+                                        key={speakerRecord.id}
+                                        speakerRecord={speakerRecord}
+                                        // id={id} // can remove these if have speakerRecord attribute
+                                        // favorite={favorite}
+                                        // firstName={firstName}
+                                        // lastName={lastName}
+                                        // bio={bio}
                                         onHeartFavoriteHandler={heartFavoriteHandler}
                                     />
                                 );

@@ -2,6 +2,8 @@
 
 This repository was created while following along with the PluralSight course, Using React 17 Hooks by Peter Kellner
 
+This project contains a lot of comments and commented out code. These serve as my notes, and as a reference to code that was refactored.
+
 Below is the relevent information copied from the Using React Hooks course README:
 
 Install Node 14.16 with NPM 7.9.

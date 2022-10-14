@@ -10,6 +10,10 @@ export const GlobalProvider = ({ children }) => {
         favoriteClickCount,
         incrementFavoriteClickCount,
         toggleSpeakerFavorite,
+        hasErrored,
+        error,
+        imageRerenderIdentifier,
+        forceImageRerender,
     } = useSpeakerDataManager();
 
     const provider = { // what useSpeakerDataManager returns
@@ -18,6 +22,10 @@ export const GlobalProvider = ({ children }) => {
         toggleSpeakerFavorite,
         incrementFavoriteClickCount,
         favoriteClickCount,
+        hasErrored,
+        error,
+        imageRerenderIdentifier,
+        forceImageRerender,
     };
 
     return (

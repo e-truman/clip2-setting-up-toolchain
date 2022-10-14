@@ -12,17 +12,25 @@ const Speakers = ({ }) => {
     const [speakingSunday, setSpeakingSunday] = useState(true);
     const context = useContext(ConfigContext); // gets reference to context
 
-    const { isLoading, speakerList, toggleSpeakerFavorite } = useContext(
+    const { isLoading,
+        speakerList,
+        toggleSpeakerFavorite,
+        hasErrored,
+        error,
+        forceImageRerender,
+    } = useContext(
         GlobalContext,
     ); // gets hook from global context. can destructure what you need
 
     // const { isLoading, speakerList, toggleSpeakerFavorite } = useSpeakerDataManager();
 
     const handleChangeSaturday = () => {
+        forceImageRerender();
         setSpeakingSaturday(!speakingSaturday);
     };
 
     const handleChangeSunday = () => {
+        forceImageRerender();
         setSpeakingSunday(!speakingSunday);
     };
     // const speakerListFiltered = isLoading  // speakerListFilter before optimizing with useMemo
@@ -82,6 +90,8 @@ const Speakers = ({ }) => {
         //     }),
         // );
     }, []); //return of useCallback caches function value
+
+    if (hasErrored === true) return <div>Error: {error.message}</div>;
 
     if (isLoading) return <div>Loading...</div> // loading message before useEffect runs
 

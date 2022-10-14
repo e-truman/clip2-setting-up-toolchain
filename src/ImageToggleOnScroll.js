@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useContext } from 'react';
+import { GlobalContext } from './GlobalState';
 
 const ImageToggleOnScroll = ({ primaryImg, secondaryImg }) => {
     const imageRef = useRef(null);
-
+    const { imageRerenderIdentifier } = useContext(GlobalContext);
     const [isLoading, setIsLoading] = useState(true);
 
     const isInView = () => {
@@ -19,7 +20,7 @@ const ImageToggleOnScroll = ({ primaryImg, secondaryImg }) => {
         return () => {
             window.removeEventListener('scroll', scrollHandler); // have to remove listener before component unmounts
         };
-    }, []); // second parameter is dependency array. empty array only runs when component first rendered
+    }, [imageRerenderIdentifier]); // second parameter is dependency array. empty array only runs when component first rendered
 
     const scrollHandler = () => {
         setInView(isInView()); // called every time you scroll. gets info about what image currently in view. sets inView state for each image

@@ -7,13 +7,33 @@ import { InitialSpeakersDataContext } from '../pages/speakers';
 const useSpeakerDataManager = () => {
     const initialSpeakersData = useContext(InitialSpeakersDataContext);
     // const [speakerList, setSpeakerList] = useState([]); // use reducer below accomplishes the same thing as this
-    const [{ isLoading, speakerList, favoriteClickCount }, dispatch] = useReducer(speakersReducer, {
-        isLoading: true,
-        speakerList: [],
+    const [
+        {
+            isLoading,
+            speakerList,
+            favoriteClickCount,
+            hasErrored,
+            error,
+            imageRerenderIdentifier,
+        },
+        dispatch,
+    ] = useReducer(speakersReducer, {
+        isLoading: false,
+        speakerList: initialSpeakersData,
         favoriteClickCount: 0,
+        hasErrored: false,
+        error: null,
+        imageRerenderIdentifier: 0,
         // isLoading: false,// no loading when you use server side rendering and useContext to initialize the array
         // speakerList: initialSpeakersData, // use this for incremental static regeneration
-    })
+    });
+
+
+    function forceImageRerender() {
+        dispatch({ type: 'forceImageRerender' });
+    }
+
+
     // first parameter is reducer function, second parameter is what ti initialize oor state to
     // const isLoading = stateObject.isLoading
     // const speakerList = stateObject.speakerList // dereferencing the object in the state in reducer is the same as doing this
@@ -23,7 +43,7 @@ const useSpeakerDataManager = () => {
     // when use dispatch keyword, speakersReducer is called. changed to dispatch from setSpeakerList
 
     const incrementFavoriteClickCount = () => {
-        dispatch({type: 'incrementFavoriteClickCount'})
+        dispatch({ type: 'incrementFavoriteClickCount' })
     }
 
     const toggleSpeakerFavorite = (speakerRecord) => {
@@ -59,9 +79,13 @@ const useSpeakerDataManager = () => {
 
         // don't need our timer if using axios
         const fetchData = async function () { // modifying our hook to get data from REST service
-            let result = await axios.get('/api/speakers'); //rest get url
-            dispatch({ type: 'setSpeakerList', data: result.data })
-        }
+            try {
+                let result = await axios.get('/api/speakers');
+                dispatch({ type: 'setSpeakerList', data: result.data });
+            } catch (e) {
+                dispatch({ type: 'errored', error: e });
+            }
+        };
         fetchData();
         return () => {
             console.log('cleanup'); // cleanup function would go here, we don't need that
@@ -73,7 +97,11 @@ const useSpeakerDataManager = () => {
         speakerList,
         favoriteClickCount,
         incrementFavoriteClickCount,
-        toggleSpeakerFavorite
+        toggleSpeakerFavorite,
+        hasErrored,
+        error,
+        forceImageRerender,
+        imageRerenderIdentifier,
     }; // handled dispatch in toggleSpeakerFavorite function to make code easier to read. hard to understand what dispatch means
 }
 

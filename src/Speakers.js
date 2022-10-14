@@ -4,14 +4,19 @@ import { Header } from './Header';
 import { Menu } from './Menu';
 import SpeakerDetail from './SpeakerDetail';
 import { ConfigContext } from './App';
-import useSpeakerDataManager from './useSpeakerDataManager';
+// import useSpeakerDataManager from './useSpeakerDataManager'; // don't need to import if you use global context
+import { GlobalContext } from './GlobalState';
 
 const Speakers = ({ }) => {
     const [speakingSaturday, setSpeakingSaturday] = useState(true);
     const [speakingSunday, setSpeakingSunday] = useState(true);
     const context = useContext(ConfigContext); // gets reference to context
 
-    const { isLoading, speakerList, toggleSpeakerFavorite } = useSpeakerDataManager();
+    const { isLoading, speakerList, toggleSpeakerFavorite } = useContext(
+        GlobalContext,
+    ); // gets hook from global context. can destructure what you need
+
+    // const { isLoading, speakerList, toggleSpeakerFavorite } = useSpeakerDataManager();
 
     const handleChangeSaturday = () => {
         setSpeakingSaturday(!speakingSaturday);
@@ -117,7 +122,7 @@ const Speakers = ({ }) => {
                     <div className="card-deck">
                         {speakerListFiltered.map(
                             // ({ id, firstName, lastName, bio, favorite }) => {
-                                (speakerRecord) => {
+                            (speakerRecord) => {
                                 return (
                                     <SpeakerDetail
                                         // takes in speaker detain properties and passes them as attributes
